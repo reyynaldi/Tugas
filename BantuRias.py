@@ -1,18 +1,22 @@
-c = []
-d = input()
-for i in range(0, int(d)):
-    e = (input())
-    f = input()
-    c.append(e)
+def kaliseratus(a):
+    return a*100
+def kurang(a,b):
+    return a - b
+def split(a):
+    return a.split(" ")
 
-a1 = c[0].split(" ")[0]
-a2 = c[0].split(" ")[1]
-a3 = c[1].split(" ")[0]
-a4 = c[1].split(" ")[1]
-a5 = c[2].split(" ")[0]
-a6 = c[2].split(" ")[1]
+case = int(input())
+listutama = []
+listakhir = []
+profit = 0
 
-b = (int(a2)-int(a1))+(int(a4)-int(a3))+(int(a6)-int(a5))
+for i in range(0, case):
+    list=input()
+    listutama.append(split(list))
+    listakhir1 = split(list)[0]
+    listakhir2 = split(list)[1]
+    listakhir = kaliseratus(kurang(int(listakhir2),int(listakhir1)))
+    profit+=listakhir
+    i+=1
 
-print(b*100)
-
+print(profit)
